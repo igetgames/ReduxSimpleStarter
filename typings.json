@@ -1,5 +1,7 @@
 {
-  "dependencies": {},
+  "dependencies": {
+    "react-sparklines": "registry:npm/react-sparklines#1.4.1+20160127183143"
+  },
   "devDependencies": {},
   "ambientDependencies": {
     "lodash": "registry:dt/lodash#3.10.0+20160330154726",
@@ -8,11 +10,15 @@
     "react-global": "github:DefinitelyTyped/DefinitelyTyped/react/react-global.d.ts#56295f5058cac7ae458540423c50ac2dcf9fc711",
     "react-redux": "registry:dt/react-redux#4.4.0+20160501125835",
     "react-router": "registry:dt/react-router#2.0.0+20160501155536",
-    "redux": "registry:dt/redux#3.3.1+20160326112656"
+    "redux": "registry:dt/redux#3.3.1+20160326112656",
+    "redux-promise": "github:DefinitelyTyped/DefinitelyTyped/redux-promise/redux-promise.d.ts#89349080150d5a3369a2f63151add48b6b550b42"
   },
   "exclude": [
     "node_modules",
     "typings/main",
     "typings/main.d.ts"
-  ]
+  ],
+  "globalDependencies": {
+    "axios": "registry:dt/axios#0.9.1+20160317120654"
+  }
 }
