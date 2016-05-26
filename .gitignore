@@ -1,6 +1,11 @@
 /node_modules
 bundle.js
 npm-debug.log
+
+# IntelliJ
+*.iml
+/.idea
+
 typings/
 .vscode/
 .DS_Store
