@@ -5,6 +5,10 @@ const config = require('../config');
 const tokenForUser = user =>
   jwt.encode({ sub: user.id, iat: new Date().getTime() }, config.secret);
 
+exports.login = (req, res, next) => {
+  res.json({ token: tokenForUser(req.user) });
+}
+
 exports.signup = function (req, res, next) {
   const email = req.body.email;
   const password = req.body.password;
