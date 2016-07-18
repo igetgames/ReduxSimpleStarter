@@ -27,6 +27,8 @@ export function signinUser({ email, password }) {
 }
 
 export function signoutUser() {
+  localStorage.removeItem('token');
+
   return {
     type: UNAUTH_USER
   };
