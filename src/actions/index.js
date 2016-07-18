@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, SET_AUTH_ERROR } from './types';
+import { AUTH_USER, UNAUTH_USER, SET_AUTH_ERROR } from './types';
 
 const API_URL = 'http://localhost:3090';
 
@@ -23,6 +23,12 @@ export function signinUser({ email, password }) {
       .catch(() => {
         dispatch(setAuthError('Invalid login'));
       });
+  };
+}
+
+export function signoutUser() {
+  return {
+    type: UNAUTH_USER
   };
 }
 
