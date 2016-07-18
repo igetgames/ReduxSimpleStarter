@@ -13,7 +13,8 @@ class UserList extends Component {
       <div key={user.id} className="card card-block">
         <h4 className="card-title">{user.name}</h4>
         <p className="card-text">{user.company.name}</p>
-        <a className="btn btn-primary" href={'mailto:' + user.email}>Email</a>
+        <a className="btn btn-primary" href={`mailto:${user.email}`}>Email</a>
+        <a className="btn btn-secondary" href={`http://${user.website}`}>Website</a>
       </div>
     );
   }
