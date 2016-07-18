@@ -4,6 +4,7 @@
     "allowSyntheticDefaultImports": true
   },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "auth/server/node_modules"
   ]
 }
