@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, compose } from 'redux';
-import promise from 'redux-promise';
+import { createStore } from 'redux';
 
 import App from './components/app';
 import reducers from './reducers';
 
-const createStoreWithMiddleware = compose(
-  applyMiddleware(promise),
+const createStoreWithMiddleware = (
   window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore);
 
