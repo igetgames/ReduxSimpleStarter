@@ -8,6 +8,9 @@ export default function auth(state = {}, action) {
     case actionTypes.UNAUTH_USER:
       return { ...state, authenticated: false };
 
+    case actionTypes.SET_AUTH_ERROR:
+      return { ...state, error: action.payload };
+
     default:
       return state;
   }
