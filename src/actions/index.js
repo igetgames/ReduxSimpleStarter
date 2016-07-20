@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-import { AUTH_USER, UNAUTH_USER, SET_AUTH_ERROR } from './types';
+import { AUTH_USER, UNAUTH_USER, SET_AUTH_ERROR, FETCH_MESSAGE } from './types';
 
 const API_URL = 'http://localhost:3090';
 
@@ -46,4 +46,18 @@ export function signoutUser() {
   };
 }
 
-export { AUTH_USER, UNAUTH_USER } from './types';
+export function fetchMessage() {
+  return dispatch => {
+    axios.get(API_URL, {
+      headers: { authorization: localStorage.getItem('token') }
+    })
+      .then(response => {
+        dispatch({
+          type: FETCH_MESSAGE,
+          payload: response.data.message
+        });
+      });
+  };
+}
+
+export { AUTH_USER, UNAUTH_USER, SET_AUTH_ERROR, FETCH_MESSAGE } from './types';
